@@ -34,7 +34,7 @@ typedef enum
 
 typedef struct   {
     char* func_name;
-    void** env_stack;
+    char** env_stack;
     char** var_names;
     char** function_to_run;
     variable_types type;
@@ -67,7 +67,7 @@ int function_check(char* word);
 char* custom_tok(char *line);
 void allocate(char* line);
 variable_types get_var(char* variable);
-char* set_function(char* existing_funcion);
+bool set_function(char* existing_funcion);
 void create_function(char* line_data);
 
 int function_exists(char* name);
@@ -76,4 +76,10 @@ void add_func(char* func_name);
 bool compare_strings(char* str1, char* str2);
 
 void search_for_line_type(char* line);
-void add_variable(char* var_name, void* data);
+void add_variable(char* var_name, char* data);
+void free_program();
+bool is_existing_function(char* func_name);
+void run_print_function(char *line);
+char* get_env_variable(char* var_name){
+
+}
