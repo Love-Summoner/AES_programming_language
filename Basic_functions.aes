@@ -1,0 +1,4 @@
+void inito()
+{
+    string s = "Hello world";
+}
